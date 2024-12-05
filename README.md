@@ -48,6 +48,24 @@ CUDA_VISIBLE_DEVICES=$CUDA_NUM python inference.py --cross_val=4 --batch_size=25
 --debug         The debug mode flag.
 ```
 
+### Source Code Strcuture
+```bash
+./LGPN
+    ├── sequence (model module folder)
+    │      ├── models (the proposed architecture)
+    │      ├── multi_label_dataloader_v2.py (dataloader)
+    │      ├── runjobs_utils.py (utility file one)
+    │      └── torch_utils.py (utility file two)
+    ├── asset (folder contains figures.)
+    ├── copy_list.txt  (ground truth file)
+    ├── copy_list_archi.txt  (ground truth file)
+    ├── hyperparameter.py  (ground truth file)
+    ├── ground_truth.py  (load ground truth)
+    ├── environment.yml
+    ├── inference.py
+    └── main.py
+```
+
 ## Citation
 ```
 @inproceedings{ tracing-hyperparameter-dependencies-for-model-parsing-via-learnable-graph-pooling-network,
